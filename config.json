@@ -1,0 +1,28 @@
+{
+    "input_device": "CABLE Output (2- VB-Audio Virtual Cable)",
+    "output_devices": [
+        "\u7ebf\u8def (USB Audio Device)"
+    ],
+    "device_settings": {
+        "\u626c\u58f0\u5668 (2- ART USB Audio)": {
+            "delay": 0,
+            "volume": 100
+        },
+        "F27G51Q Pro (NVIDIA High Definition Audio)": {
+            "delay": 0,
+            "volume": 100
+        },
+        "\u626c\u58f0\u5668 (Realtek(R) Audio)": {
+            "delay": 0,
+            "volume": 100
+        },
+        "LG HDR WFHD (NVIDIA High Definition Audio)": {
+            "delay": 0,
+            "volume": 100
+        },
+        "\u7ebf\u8def (USB Audio Device)": {
+            "delay": 0,
+            "volume": 100
+        }
+    }
+}

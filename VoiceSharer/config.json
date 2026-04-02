@@ -1,0 +1,23 @@
+{
+    "input_device": "CABLE Output (VB-Audio Virtual Cable)",
+    "output_devices": [
+        "\u626c\u58f0\u5668 (RETRO NANO) (Windows WASAPI)",
+        "\u8033\u673a (Realtek(R) Audio) (Windows WASAPI)",
+        "\u626c\u58f0\u5668 (Realtek(R) Audio) (Windows WASAPI)"
+    ],
+    "device_settings": {
+        "LG HDR WFHD (NVIDIA High Definition Audio)": {
+            "delay": 0,
+            "volume": 100
+        },
+        "\u626c\u58f0\u5668 (Realtek(R) Audio)": {
+            "delay": 6,
+            "volume": 100
+        },
+        "\u626c\u58f0\u5668 (RETRO NANO)": {
+            "delay": 0,
+            "volume": 100
+        }
+    },
+    "groups": {}
+}

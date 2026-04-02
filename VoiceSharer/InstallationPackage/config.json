@@ -1,0 +1,11 @@
+{
+    "input_device": null,
+    "output_devices": [],
+    "device_settings": {},
+    "groups": {
+        "\u7ec4\u5408 1": [
+            "\u626c\u58f0\u5668 (Realtek(R) Audio)",
+            "\u8033\u673a (2- RETRO NANO)"
+        ]
+    }
+}
