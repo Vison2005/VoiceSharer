@@ -3,9 +3,8 @@ import os
 import sys
 
 def resource_path(relative_path):
-    """获取资源绝对路径（兼容开发/打包）"""
+    """获取资源路径"""
     try:
-        # PyInstaller 临时路径
         base_path = sys._MEIPASS
     except Exception:
         base_path = os.path.abspath(".")
@@ -13,6 +12,7 @@ def resource_path(relative_path):
     return os.path.join(base_path, relative_path)
 
 class ConfigManager:
+    """配置管理器"""
     def __init__(self, config_file="config.json"):
         self.config_file = config_file
         self.config = {
@@ -24,6 +24,7 @@ class ConfigManager:
         }
 
     def load(self):
+        """加载配置"""
         if os.path.exists(self.config_file):
             try:
                 with open(self.config_file, 'r') as f:
@@ -35,6 +36,7 @@ class ConfigManager:
         return self.config
 
     def save(self):
+        """保存配置"""
         try:
             with open(self.config_file, 'w') as f:
                 json.dump(self.config, f, indent=4)
@@ -42,7 +44,9 @@ class ConfigManager:
             print(f"保存配置错误: {e}")
 
     def get(self, key, default=None):
+        """获取配置项"""
         return self.config.get(key, default)
 
     def set(self, key, value):
+        """设置配置项"""
         self.config[key] = value

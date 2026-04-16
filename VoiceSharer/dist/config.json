@@ -1,23 +1,24 @@
 {
     "input_device": "CABLE Output (VB-Audio Virtual Cable)",
     "output_devices": [
+        "Roland (4- Roland Digital Piano)",
         "\u626c\u58f0\u5668 (Realtek(R) Audio)",
         "Edifier (Realtek(R) Audio)"
     ],
     "device_settings": {
-        "F27G51Q Pro (2- NVIDIA High Definition Audio)": {
-            "delay": 0,
+        "Roland (4- Roland Digital Piano)": {
+            "delay": 93,
             "volume": 100
         },
         "\u626c\u58f0\u5668 (Realtek(R) Audio)": {
-            "delay": 80,
+            "delay": 0,
             "volume": 100
         },
         "DAC (RETRO NANO)": {
             "delay": 0,
             "volume": 100
         },
-        "Roland (4- Roland Digital Piano)": {
+        "\u8033\u673a (XFW-BT)": {
             "delay": 0,
             "volume": 100
         },
@@ -26,21 +27,19 @@
             "volume": 100
         },
         "Edifier (Realtek(R) Audio)": {
-            "delay": 130,
+            "delay": 4,
             "volume": 100
         },
         "\u626c\u58f0\u5668 (ART USB Audio)": {
             "delay": 0,
             "volume": 100
+        },
+        "F27G51Q Pro (2- NVIDIA High Definition Audio)": {
+            "delay": 0,
+            "volume": 100
         }
     },
-    "autostart": true,
-    "minimize_to_tray": true,
-    "groups": {
-        "\u7ec4\u5408 1": [
-            "\u626c\u58f0\u5668 (5- ART USB Audio)",
-            "\u7ebf\u8def (4- Roland Digital Piano)",
-            "\u626c\u58f0\u5668 (Realtek(R) Audio)"
-        ]
-    }
+    "autostart": false,
+    "minimize_to_tray": false,
+    "groups": {}
 }

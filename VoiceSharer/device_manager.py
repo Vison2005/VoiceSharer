@@ -1,13 +1,13 @@
 import sounddevice as sd
 
 class DeviceManager:
+    """音频设备管理器"""
     def __init__(self):
         self.input_devices = []
         self.output_devices = []
 
     def refresh_devices(self):
-        """扫描可用音频设备。"""
-        # 重启 PortAudio 检测热插拔
+        """刷新可用设备"""
         try:
             sd._terminate()
             sd._initialize()
@@ -20,7 +20,6 @@ class DeviceManager:
         devices = sd.query_devices()
         hostapis = sd.query_hostapis()
         
-        # 检查 WASAPI
         wasapi_index = -1
         for i, api in enumerate(hostapis):
             if 'WASAPI' in api['name']:
@@ -28,19 +27,12 @@ class DeviceManager:
                 break
         
         for i, dev in enumerate(devices):
-            # dev 结构信息
-            
             host_api_info = sd.query_hostapis(dev['hostapi'])
             api_name = host_api_info['name']
             
-            # Windows 下仅显示 WASAPI 设备
             if wasapi_index >= 0 and dev['hostapi'] != wasapi_index:
                 continue
 
-            # 保留 Loopback
-            
-            # 构建设备名
-            # 隐藏 Windows WASAPI 后缀
             final_name = dev['name']
             if api_name and api_name != "Windows WASAPI":
                 final_name = f"{final_name} ({api_name})"
@@ -58,17 +50,19 @@ class DeviceManager:
                 self.input_devices.append(device_info)
             
             if dev['max_output_channels'] > 0:
-                # 过滤 VB-Cable 防反馈
                 if "VB-Audio" not in device_info['name'] and "CABLE" not in device_info['name']:
                     self.output_devices.append(device_info)
 
     def get_input_devices(self):
+        """获取输入设备列表"""
         return self.input_devices
 
     def get_output_devices(self):
+        """获取输出设备列表"""
         return self.output_devices
 
     def get_device_by_id(self, device_id):
+        """通过 ID 获取设备"""
         try:
             return sd.query_devices(device_id)
         except:
